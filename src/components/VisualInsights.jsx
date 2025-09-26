@@ -112,7 +112,7 @@ export default function VisualInsights() {
                     nameKey="name"
                   >
                     {sentimentData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
+                      <Cell key={`cell-${index}`} fill={entry.color} style={{ outline: 'none' }}/>
                     ))}
                   </Pie>
                   <Tooltip content={<CustomTooltip />} />
