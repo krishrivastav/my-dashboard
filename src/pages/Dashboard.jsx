@@ -41,7 +41,7 @@ export default function Dashboard() {
               </TabsTrigger>
             </TabsList>
             
-            <Button className="bg-purple-600 hover:bg-purple-700 gap-2 shadow-lg w-full lg:w-auto">
+            <Button className="bg-purple-600 text-white hover:bg-purple-700 gap-2 shadow-lg w-full lg:w-auto">
               <Upload className="w-4 h-4" />
               Upload Draft
             </Button>
