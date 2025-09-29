@@ -1,16 +1,56 @@
-# React + Vite
+# APCAS: Automated Public Consultation Analysis System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sentiment analysis of the comments recieved through the E-consultation module.
+This is a demo of the actual product and represents the ideas of our team. The dataset(comments) taken from
+the MCA portal through E-consultation module are passed through several models to give an accurate and 
+informative summary of the opinions of the people.
 
-Currently, two official plugins are available:
+- This project is a part of Smart India Hackathon 2025.
+- Organisation: Ministry of Corporate Affairs
+- PS Number: SIH25035
+- Team: NEXT_CODE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Demo
+🔗 Live Website: https://econsultation.vercel.app
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
+- Responsive UI with TailwindCSS
+- Interactive components (filters, charts, word cloud, etc.)
+- Hosted with CI/CD using Vercel + GitHub
+- Optimized for performance
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+- **Frontend:** React, Vite, TailwindCSS
+- **Deployment:** Vercel
+- **Version Control:** Git + GitHub
+
+---
+
+## Installation & Setup
+To run this project locally:
+
+## Credits:
+
+Collaboratos: [@Yash-267](https://github.com/Yash-267)  
+Special thanks to Team NEXT_CODE.
+
+---
+
+```bash
+# Clone the repository
+git clone https://github.com/krishrivastav/my-dashboard.git
+
+# Navigate to the project folder
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
