@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
-import { TrendingUp, Cloud, Hash } from "lucide-react";
+import { TrendingUp, Cloud, Hash, Download, FileText } from "lucide-react";
 
 const sentimentData = [
   { name: 'Positive', value: 16.7, count: 25, color: '#14B8A6' },
@@ -51,10 +52,10 @@ const CustomTooltip = ({ active, payload, label }) => {
     return (
       <div className="bg-white p-3 border border-slate-300 rounded-lg shadow-lg">
         <p className="font-medium">{`${payload[0].name}: ${payload[0].value.toFixed(1)}%`}</p>
-        <p className="text-sm text-slate-600">{`Count: ${payload[0].payload.count} comments`}</p>
+<p className="text-sm text-slate-600">{`Count: ${payload[0].payload.count} comments`}</p>
       </div>
     );
-  }
+}
   return null;
 };
 
@@ -69,7 +70,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
   return (
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" className="text-xs font-medium">
-      {`${(percent * 100).toFixed(0)}%`}
+      {(percent * 100).toFixed(0)}%
     </text>
   );
 };
@@ -81,14 +82,7 @@ export default function VisualInsights() {
     setIsClient(true);
   }, []);
 
-//   const sizeMap = { 
-//   'text-4xl': 'text-2xl', 
-//   'text-3xl': 'text-xl', 
-//   'text-2xl': 'text-lg',
-//   'text-xl': 'text-base', // optional: you can add more sizes if needed
-// };
-
-const sizeMap = {
+  const sizeMap = {
   'text-4xl': 'text-2xl',
   'text-3xl': 'text-xl',
   'text-2xl': 'text-lg',
@@ -98,16 +92,29 @@ const sizeMap = {
   'text-sm': 'text-xs'
 };
 
+  const handleDownloadReport = () => {
+    window.print();
+  };
+
   return (
     <div className="space-y-6 lg:space-y-8">
-      <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-4 lg:p-6">
-        <h2 className="text-xl lg:text-2xl font-bold text-slate-900 mb-4 lg:mb-6 flex items-center gap-3">
-          <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-purple-600" />
-          Visual Analytics Dashboard
-        </h2>
+      <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-4 lg:p-6 printable-area">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 lg:mb-6 gap-4">
+          <h2 className="text-xl lg:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-purple-600" />
+            Visual Analytics Dashboard
+          </h2>
+          {/* <Button 
+            onClick={handleDownloadReport}
+            className="bg-green-600 hover:bg-green-700 gap-2 shadow-lg w-full sm:w-auto no-print"
+          >
+            {/* <Download className="w-4 h-4" />
+            Download PDF Report
+          </Button> */ }
+        </div>
 
+        {/* Pie Chart */}
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
-          {/* Pie Chart */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base lg:text-lg">
@@ -157,7 +164,7 @@ const sizeMap = {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base lg:text-lg">
-                <Hash className="w-4 h-4 lg:w-5 lg:h-5 text-purple-600" />
+                <BarChart className="w-4 h-4 lg:w-5 lg:h-5 text-purple-600" />
                 Top Discussion Topics
               </CardTitle>
             </CardHeader>
@@ -200,22 +207,8 @@ const sizeMap = {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-4 lg:p-8 min-h-[250px] lg:min-h-[350px] flex flex-wrap items-center justify-center gap-2 lg:gap-4"> */}
-                        <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-4 lg:p-8 min-h-[250px] lg:min-h-[350px] flex flex-wrap items-center justify-center gap-2 lg:gap-4">
-              {/* {keyTerms.map((term, index) => (
-                <span
-                  key={index}
-                  className={`${term.size.replace('4xl', '2xl').replace('3xl', 'xl').replace('2xl', 'lg')} lg:${term.size} font-bold transition-all duration-300 hover:scale-110 cursor-pointer text-center`}
-                  style={{
-                    color: `hsl(${(term.frequency * 5) % 360}, 70%, 50%)`,
-                    opacity: Math.max(0.6, term.frequency / 68)
-                  }}
-                  title={`${term.term}: ${term.frequency} mentions, ${term.words} word${term.words > 1 ? 's' : ''}`}
-                >
-                  {term.term}
-                </span>
-              ))} */}
-{keyTerms.map((term, index) => {
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-4 lg:p-8 min-h-[250px] lg:min-h-[350px] flex flex-wrap items-center justify-center gap-2 lg:gap-4">
+              {keyTerms.map((term, index) => {
   const smallSize = sizeMap[term.size] || term.size;
 
   return (
@@ -226,12 +219,10 @@ const sizeMap = {
         color: `hsl(${(term.frequency * 5) % 360}, 70%, 50%)`,
         opacity: Math.max(0.6, term.frequency / 68)
       }}
-      title={`${term.term}: ${term.frequency} mentions, ${term.words} word${term.words > 1 ? 's' : ''}`}
-    >
+      title={`${term.term}: ${term.frequency} mentions, ${term.words} word${term.words > 1 ? 's' : ''}`}>
       {term.term}
     </span>
-  );
-})}
+              )})}
             </div>
             <div className="mt-4 text-center text-xs lg:text-sm text-slate-500">
               <p>Hover over terms to see frequency count and word count. Larger text indicates higher frequency of mentions.</p>
