@@ -67,7 +67,7 @@ export default function Dashboard() {
                       <BarChart3 className="w-6 h-6 text-green-600" />
                     </div>
                     <h3 className="font-semibold text-slate-900 mb-2">Sentiment Classification</h3>
-                    <p className="text-sm text-slate-600">Automatically categorize comments as positive, supportive, critical/suggestive, concerned, negative.</p>
+                    <p className="text-sm text-slate-600">Automatically categorize comments as supportive, critical, or neutral</p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
