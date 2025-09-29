@@ -8,11 +8,11 @@ import { Sparkles, ThumbsUp, ThumbsDown, AlertTriangle, PenSquare, Building2, Ca
 
 const commentData = {
   positive: [
-    { id: 117, text: "This is a landmark reform. The digitization of all compliance under Companies Act 2013 is a game-changer for India's ease of doing business rankings. Our organization gives its unequivocal support.", author: "Rajesh Kumar", organization: "India Inc. Leadership Forum", industry: "Industry Association", role: "President", date: "2024-03-01", section: "Digital Transformation" },
-    { id: 118, text: "The introduction of the Social Stock Exchange framework is a visionary move that will unlock unprecedented capital for the social sector. We are extremely optimistic about its transformative potential.", author: "Sarah Williams", organization: "Global Impact Investors", industry: "Banking & Financial Services", role: "Investment Head", date: "2024-03-02", section: "Social Stock Exchange" },
+    { id: 117, text: "This segment of stakeholders views the proposed amendments as transformative, game-changing reforms. The feedback is marked by unequivocal support and optimism, with particular emphasis on landmark initiatives such as complete digitization of compliance and the introduction of the Social Stock Exchange.", author: "Rajesh Kumar", organization: "India Inc. Leadership Forum", industry: "Industry Association", role: "President", date: "2024-03-01", section: "Digital Transformation" },
+    { id: 118, text: "Stakeholders note that digitization under the Companies Act, 2013 will not only simplify compliance but also enhance efficiency, transparency, and ease of doing business—key factors in strengthening India's global competitiveness. The Social Stock Exchange framework is welcomed as a visionary step that can unlock new avenues of capital for non-profits and social enterprises, driving inclusive growth and social impact at scale.", author: "Sarah Williams", organization: "Global Impact Investors", industry: "Banking & Financial Services", role: "Investment Head", date: "2024-03-02", section: "Social Stock Exchange" },
     ...Array.from({ length: 23 }, (_, i) => ({ 
       id: 119 + i, 
-      text: "An outstanding and forward-thinking proposal. This will have a profoundly positive impact on the corporate ecosystem.", 
+      text: "Overall, these reforms are seen as bold, forward-looking measures that will deliver profound and lasting benefits for India's corporate and social landscape, creating an ecosystem that fosters innovation, accountability, and sustainable progress.", 
       author: `Stakeholder ${i+1}`, 
       organization: `Organization ${i+1}`, 
       industry: ["IT & Software", "Manufacturing", "Pharmaceuticals", "Banking & Financial Services"][i % 4],
@@ -22,8 +22,8 @@ const commentData = {
     }))
   ],
   supportive: [
-    { id: 1, text: "Section 135 CSR expenditure threshold revision is well-thought and provides much needed relief to small and medium enterprises.", author: "Priya Sharma", organization: "Mumbai Chamber of Commerce", industry: "Industry Association", role: "Secretary General", date: "2024-01-15", section: "Section 135" },
-    { id: 2, text: "The proposed amendments regarding digital filing procedures will streamline processes and reduce paperwork. Highly supportive of this initiative.", author: "Amit Gupta", organization: "FICCI Representative", industry: "Industry Association", role: "Policy Head", date: "2024-01-14", section: "Digital Filing" },
+    { id: 1, text: "This large group of stakeholders expresses consistent and solid support for the proposed reforms, recognizing them as meaningful improvements that align with the practical needs of businesses. The feedback highlights three key areas of appreciation: the revision of CSR expenditure thresholds, which is seen as providing much-needed relief for small and medium enterprises; the introduction of streamlined digital filing procedures, expected to reduce paperwork and enhance efficiency; and the move to permanently allow virtual AGMs, praised for its potential to cut costs while promoting wider shareholder participation.", author: "Priya Sharma", organization: "Mumbai Chamber of Commerce", industry: "Industry Association", role: "Secretary General", date: "2024-01-15", section: "Section 135" },
+    { id: 2, text: "Although the tone of this group is not as effusive as the “extremely positive” segment, the underlying sentiment is still clearly favorable. Stakeholders repeatedly affirm that the reforms represent a step in the right direction, reflecting a balanced mix of approval, pragmatism, and alignment with the government's overall intent. Broadly, these stakeholders view the amendments as sensible, business-friendly measures that will deliver tangible benefits, strengthen compliance mechanisms, and improve operational ease without imposing unnecessary complexities.", author: "Amit Gupta", organization: "FICCI Representative", industry: "Industry Association", role: "Policy Head", date: "2024-01-14", section: "Digital Filing" },
     { id: 3, text: "Amendment to allow virtual AGMs permanently is excellent. This will reduce costs for companies and increase shareholder participation.", author: "Dr. Meena Patel", organization: "Indian Institute of Corporate Affairs", industry: "Education", role: "Director", date: "2024-01-13", section: "AGM Provisions" },
     ...Array.from({ length: 47 }, (_, i) => ({ 
       id: 4 + i, 
@@ -37,11 +37,11 @@ const commentData = {
     }))
   ],
   criticalSuggestive: [
-    { id: 51, text: "While the intent of Section 135 amendments is clear, the implementation timeline requires further clarification to avoid confusion.", author: "Vikram Singh", organization: "Corporate Law Society", industry: "Legal Services", role: "Senior Partner", date: "2024-01-15", section: "Section 135" },
-    { id: 52, text: "The proposed changes to audit committee composition have merit, but the one-size-fits-all approach may not work for diverse industries. We suggest a consultation.", author: "Anita Desai", organization: "Audit Committee Institute", industry: "Accounting & Audit", role: "Lead Auditor", date: "2024-01-14", section: "Audit Committee" },
+    { id: 51, text: "This group's feedback is constructive and conditional. They generally do not oppose the intent behind the amendments but raise important questions about practical implementation. Key themes include the need for clearer guidelines, more realistic timelines, and a less rigid, 'one-size-fits-all' approach.", author: "Vikram Singh", organization: "Corporate Law Society", industry: "Legal Services", role: "Senior Partner", date: "2024-01-15", section: "Section 135" },
+    { id: 52, text: "Specifically, stakeholders express the view that while the proposal is sound in principle, many practical aspects require further clarification to avoid confusion and ensure smooth execution. For example, the timeline for implementing Section 135 CSR amendments calls for more detailed communication. The proposed changes to audit committee composition, though meritorious, may not suit all industries equally and warrant broader consultation.", author: "Anita Desai", organization: "Audit Committee Institute", industry: "Accounting & Audit", role: "Lead Auditor", date: "2024-01-14", section: "Audit Committee" },
     ...Array.from({ length: 33 }, (_, i) => ({ 
       id: 53 + i, 
-      text: "The proposal is sound in principle, but we have reservations about the practical application. More detailed guidelines are necessary.", 
+      text: "Overall, support from this group is contingent on addressing these practical concerns, with emphasis on tailoring guidance to diverse industry needs and providing detailed, actionable directions. Their feedback reflects confidence in the reforms’ objectives, paired with a strong preference for flexible, transparent, and well-structured implementation plans.", 
       author: `Professional ${i+1}`, 
       organization: `Firm ${i+1}`, 
       industry: ["Consulting", "Legal Services", "Accounting & Audit", "Banking & Financial Services"][i % 4],
@@ -51,11 +51,11 @@ const commentData = {
     }))
   ],
   concerned: [
-    { id: 86, text: "The timeline for filing annual CSR reports is too aggressive. Companies need at least 6 months post-financial year to compile comprehensive data.", author: "Ravi Agarwal", organization: "Corporate CSR Council", industry: "Industry Association", role: "Executive Director", date: "2024-01-14", section: "Section 135" },
-    { id: 87, text: "Mandatory quarterly compliance reporting will increase administrative burden without proportionate benefits. This will disproportionately affect smaller companies.", author: "Sunita Jain", organization: "SME Chamber", industry: "Industry Association", role: "President", date: "2024-01-13", section: "Compliance Reporting" },
+    { id: 86, text: "This group of stakeholders expresses specific objections to certain provisions of the draft legislation. Their concerns center on tangible negative impacts such as increased administrative burdens, aggressive reporting deadlines, and higher compliance costs, which they feel outweigh the intended benefits. A major issue raised is that the timeline for filing annual CSR reports is too aggressive, with calls for companies to have at least six months after the financial year to compile accurate data.", author: "Ravi Agarwal", organization: "Corporate CSR Council", industry: "Industry Association", role: "Executive Director", date: "2024-01-14", section: "Section 135" },
+    { id: 87, text: "Mandatory quarterly compliance reporting is also seen as an unnecessary administrative burden, especially for smaller companies, potentially leading to disproportionate challenges. Many respondents emphasize that these amendments will introduce additional complications and increased costs for their members.", author: "Sunita Jain", organization: "SME Chamber", industry: "Industry Association", role: "President", date: "2024-01-13", section: "Compliance Reporting" },
     ...Array.from({ length: 23 }, (_, i) => ({ 
       id: 88 + i, 
-      text: "We believe this amendment will introduce unnecessary complications and increase costs for our members.", 
+      text: "Overall, stakeholders urge reconsideration of timelines, reporting frequencies, and cost implications to ensure the reforms are feasible and fair, particularly for smaller entities. Their feedback reflects concern that without such adjustments, the reforms may place undue strain on companies.", 
       author: `Representative ${i+1}`, 
       organization: `Association ${i+1}`, 
       industry: ["Startups/SMEs", "Manufacturing", "Textiles", "Real Estate"][i % 4],
